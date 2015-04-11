@@ -54,23 +54,22 @@
                           </block>
                         </value>
                         <statement name="DO0">
-                          <block type="movement_stop" id="165">
+                          <block type="movement_stop" id="165"></block>
+                        </statement>
+                        <statement name="ELSE">
+                          <block type="movement_leftmotor" id="48" inline="true">
+                            <value name="MOVLEFT">
+                              <block type="math_number" id="62">
+                                <field name="NUM">60</field>
+                              </block>
+                            </value>
                             <next>
-                              <block type="movement_leftmotor" id="48" inline="true">
-                                <value name="MOVLEFT">
-                                  <block type="math_number" id="62">
+                              <block type="movement_rightmotor" id="72" inline="true">
+                                <value name="MOVRIGHT">
+                                  <block type="math_number" id="85">
                                     <field name="NUM">60</field>
                                   </block>
                                 </value>
-                                <next>
-                                  <block type="movement_rightmotor" id="72" inline="true">
-                                    <value name="MOVRIGHT">
-                                      <block type="math_number" id="85">
-                                        <field name="NUM">60</field>
-                                      </block>
-                                    </value>
-                                  </block>
-                                </next>
                               </block>
                             </next>
                           </block>
