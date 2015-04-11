@@ -12,6 +12,43 @@
             <field name="NUM">60</field>
           </block>
         </value>
+        <next>
+          <block type="variables_set" id="100" inline="true">
+            <field name="VAR">blue</field>
+            <value name="VALUE">
+              <block type="sensor_spectrometer" id="92">
+                <field name="LIGHT">BLUE</field>
+              </block>
+            </value>
+            <next>
+              <block type="oled_cleardisplay" id="109">
+                <next>
+                  <block type="oled_setcursor" id="118" inline="true">
+                    <value name="STARTX">
+                      <block type="math_number" id="131">
+                        <field name="NUM">19</field>
+                      </block>
+                    </value>
+                    <value name="STARTY">
+                      <block type="math_number" id="138">
+                        <field name="NUM">19</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="oled_drawnumber" id="147" inline="true">
+                        <value name="NUMBER">
+                          <block type="sensor_spectrometer" id="154">
+                            <field name="LIGHT">BLUE</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
       </block>
     </next>
   </block>
